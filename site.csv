@@ -1,0 +1,7 @@
+zone,dns,rules
+elitepoker.click ,"{""name"": ""@"", ""type"": ""A"", ""content"": ""216.58.194.206""}","{""name"": ""Block DDoS UserAgent"", ""action"": ""block"", ""filter"": ""(http.user_agent contains \""Python\"")"", ""priority"": 1, ""paused"": False}"
+elitepoker.click ,"{""name"": ""web"", ""type"": ""CNAME"", ""content"": ""@""}","{""name"": ""Allow Enterra list"", ""action"": ""allow"", ""filter"": ""(ip.src in $white_list_enterra)"", ""priority"": 2, ""paused"": False}"
+elitepoker.click ,,"{""name"": ""Block ne MN"", ""action"": ""block"", ""filter"": ""(ip.geoip.country ne \""MN\"")"", ""priority"": 3, ""paused"": True}"
+elitepoker.guru ,"{""name"": ""@"", ""type"": ""A"", ""content"": ""216.58.194.206""}","{""name"": ""Block DDoS UserAgent"", ""action"": ""block"", ""filter"": ""(http.user_agent contains \""Python\"")"", ""priority"": 1, ""paused"": False}"
+elitepoker.guru ,"{""name"": ""web"", ""type"": ""CNAME"", ""content"": ""@""}","{""name"": ""Allow Enterra list"", ""action"": ""allow"", ""filter"": ""(ip.src in $white_list_enterra)"", ""priority"": 2, ""paused"": False}"
+elitepoker.guru ,,"{""name"": ""Block ne MN"", ""action"": ""block"", ""filter"": ""(ip.geoip.country ne \""MN\"")"", ""priority"": 3, ""paused"": False}"

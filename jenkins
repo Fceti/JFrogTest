@@ -1,0 +1,30 @@
+pipeline {
+
+    agent {
+        node {
+      label 'linux' 
+        }
+    }
+    stages {
+        stage('Build') {
+                         environment { 
+                              TOKEN_CF = credentials('${TOKEN}') 
+                              DOCKER_CREADS = credentials('dockerhub')
+                        }
+                          steps {
+                                  sh '''
+                                  docker login -u ${DOCKER_CREADS_USR} -p ${DOCKER_CREADS_PSW} registry.enterra.ln:5050
+                                  docker pull registry.enterra.ln:5050/devops/cloudflare:master
+                                  docker run -i -e ENV_JENKINS=\"{'TOKEN': '${TOKEN_CF}', 'zone': '${zones}', 'ipaddress': '${ip_address}', 'mongol': 'false', 'records': '${records}'}\" --rm registry.enterra.ln:5050/devops/cloudflare:master
+                                  '''
+                                 
+                               }
+          }
+        }
+    }
+    
+
+
+
+
+
