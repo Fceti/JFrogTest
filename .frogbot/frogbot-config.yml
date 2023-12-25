@@ -1,0 +1,9 @@
+- params:
+    git:
+      repoName: JFrogTest
+      branches:
+        - main
+    scan:
+      projects:
+        - workingDirs:
+            - /
