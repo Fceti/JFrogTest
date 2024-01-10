@@ -4,8 +4,9 @@ import sys
 import CloudFlare
 import click
 
-#TOKEN = 'wgKC7ELJaC8t6c6DkOttyQEr0bBZV5IQ1Cy8wKtd'
-
+TOKEN = 'wgKC7ELJaC8t6c6DkOttyQEr0bBZV5IQ1Cy8wKtd'
+login = 'Zhenya'
+password = 'ZhenyaLox'
 def create_zone(cf, zone_name):
     print("Создаем зону")
     zone_id = ''
